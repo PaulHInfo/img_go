@@ -7,13 +7,13 @@ type WaitGrpTask struct {
 	Filter filter.Filter
 }
 
-func newWaitGrpTask(srcDir, dstDir string, Filter filter.Filter) Tasker {
+func NewWaitGrpTask(srcDir, dstDir string, Filter filter.Filter) Tasker {
 	return &WaitGrpTask{
 		Filter: filter,
 		dirCtx: dirCtx{
 			srcDir: srcDir,
-			DstDir: DstDir,	
-			files:  BuildFileList(srcDir)
+			DstDir: DstDir,
+			files:  BuildFileList(srcDir),
 		},
 	}
 }
